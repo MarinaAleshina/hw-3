@@ -86,12 +86,3 @@ const getInfo = function getInfo({
 };
 
 getInfo(organisation);
-
-// function getInfo(organisation) {
-//   const {
-//     name,
-//     info: { partners }
-//   } = organisation;
-//   return { name: name || `UNKNOWN`, partners: partners.slice(0, 2) };
-// }
-// console.log(getInfo(organisation));
