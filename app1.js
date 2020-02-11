@@ -29,28 +29,25 @@
 // console.log(multiply(3));
 // console.log(multiply(10));
 // ----------------------------------------------
-// const product = {
-//   brand: "Apple",
-//   model: "iPhone 7",
-//   price: "$300",
-//   get fullName() {
-//     return product.brand + " " + product.model;
-//   },
+const product = {
+  brand: "Apple",
+  model: "iPhone 7",
+  price: "$300",
 
-//   set fullName(value) {
-//     var split = value.split(" ");
-//     product.brand = split[0];
-//     product.model = split[1];
-//   }
-// };
+  get fullName() {
+    return `${this.brand}` + " " + `${this.model}`;
+  },
+  set fullName(value) {
+    let split = value.split(" ");
+    this.brand = split[0];
+    this.model = split[1];
+  }
+};
 
-// product.fullName;
-// console.log(product.fullName);
-// console.log(product);
-// product.fullName = "sumsung s8";
-// console.log(product.brand);
-// console.log(product.model);
-// console.log(product);
+console.log(product.fullName);
+product.fullName = "Samsung S8 Gold";
+console.log(product.brand);
+console.log(product.model);
 //
 // ---------------------------------
 // const person = {
