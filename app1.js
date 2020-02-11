@@ -29,25 +29,25 @@
 // console.log(multiply(3));
 // console.log(multiply(10));
 // ----------------------------------------------
-const product = {
-  brand: "Apple",
-  model: "iPhone 7",
-  price: "$300",
+// const product = {
+//   brand: "Apple",
+//   model: "iPhone 7",
+//   price: "$300",
 
-  get fullName() {
-    return `${this.brand}` + " " + `${this.model}`;
-  },
-  set fullName(value) {
-    let split = value.split(" ");
-    this.brand = split[0];
-    this.model = split[1];
-  }
-};
+//   get fullName() {
+//     return `${this.brand}` + " " + `${this.model}`;
+//   },
+//   set fullName(value) {
+//     let split = value.split(" ");
+//     this.brand = split[0];
+//     this.model = split[1];
+//   }
+// };
 
-console.log(product.fullName);
-product.fullName = "Samsung S8 Gold";
-console.log(product.brand);
-console.log(product.model);
+// console.log(product.fullName);
+// product.fullName = "Samsung S8 Gold";
+// console.log(product.brand);
+// console.log(product.model);
 //
 // ---------------------------------
 // const person = {
@@ -65,13 +65,27 @@ console.log(product.model);
 // }
 // console.log(person);
 // -----------------------------------------
-// const organisation = {
-//   name: "Google",
-//   info: {
-//     employees: ["Vlad", "Olga"],
-//     partners: ["Microsoft", "Facebook", "Xing"]
-//   }
-// };
+const organisation = {
+  name: "Google",
+  info: {
+    employees: ["Vlad", "Olga"],
+    partners: ["Microsoft", "Facebook", "Xing"]
+  }
+};
+
+const getInfo = function getInfo({
+  name = "Unknown",
+  info: {
+    partners: [org1, org2]
+  }
+}) {
+  console.log({
+    Name: name,
+    Partners: `${org1} ${org2}`
+  });
+};
+
+getInfo(organisation);
 
 // function getInfo(organisation) {
 //   const {
